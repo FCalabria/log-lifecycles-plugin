@@ -1,5 +1,6 @@
 export default {
   install: (Vue) => {
+    if (process.env.NODE_ENV === 'production') return
     const mixin = {}
     const config = {
       created: {msg: 'was created', color: '#04B431'},
