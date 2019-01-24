@@ -1,4 +1,4 @@
-# Vue log lifecycles
+# Vue lifecycle log
 
 > A Vue.js plugin to log lifecycles of the components
 
@@ -7,14 +7,14 @@
 Installation
 
 ```sh
-npm install --save log-lifecycles-plugin
+npm install --save vue-lifecycle-log
 ```
 
 Import it on your entry file (normally `main.js`) and use it with Vue. It is automatically disabled on production mode.
 
 ```javascript
 import Vue from 'vue'
-import LogLifecycles from 'log-lifecycles-plugin'
+import LogLifecycles from 'vue-lifecycle-log'
 
 Vue.use(LogLifecycles)
 ```

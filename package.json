@@ -1,5 +1,5 @@
 {
-  "name": "log-lifecycles-plugin",
+  "name": "vue-lifecycle-log",
   "version": "1.0.0",
   "description": "Vue plugin to log the components' licefycles",
   "main": "dist/index.js",
