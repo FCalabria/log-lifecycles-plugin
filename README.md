@@ -1,3 +1,5 @@
+[![npm version](https://img.shields.io/npm/v/vue-lifecycle-log.svg)](https://www.npmjs.com/package/vue-lifecycle-log)
+
 # Vue lifecycle log
 
 > A Vue.js plugin to log lifecycles of the components
@@ -21,13 +23,4 @@ Vue.use(LogLifecycles)
 
 It uses the component's `name` for logging, so if you don't have it defined, it will print undefined
 
-## Lifecycles supported
-
-Right now it logs only the following lifecycles:
-
-- Created
-- Mounted
-- Updated
-- Activated
-- Deactivated
-- Destroyed
+![log example](./imgs/log-example.jpg)
