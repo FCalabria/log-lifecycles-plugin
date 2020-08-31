@@ -22,9 +22,10 @@ function filterLifecycles (name) {
 }
 
 export default {
-  install: (Vue, { lifecycles = [] } = {}) => {
+  install: (Vue, { lifecycles = [], components = [] } = {}) => {
     if (process.env.NODE_ENV === 'production') return
     if (!Array.isArray(lifecycles)) throwError('lifecycles option must be an array')
+    if (!Array.isArray(components)) throwError("components option must be an array");
 
     const mixin = {}
     const lifecyclesToLog = lifecycles.length === 0
@@ -32,6 +33,8 @@ export default {
       : lifecycles.filter(filterLifecycles);
 
     function logLivecycle (componentName, lifecycle) {
+      if (components.length > 0 && components.indexOf(componentName) < 0) { return; }
+
       const lifecycleConfig = config[lifecycle]
       console.log(`%c ${componentName} ${lifecycleConfig.msg}`, `color:${lifecycleConfig.color}`)
     }
@@ -45,4 +48,3 @@ export default {
     Vue.mixin(mixin)
   }
 }
-
