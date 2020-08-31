@@ -35,5 +35,15 @@ import LogLifecycles from 'vue-lifecycle-log'
 
 Vue.use(LogLifecycles, { lifecycles: ['created', 'beforeDestroy'] })
 ```
+### Configuring components to print
+
+The component's name to print can be filtered by passing an array in the plugin options, like:
+
+```javascript
+import Vue from 'vue'
+import LogLifecycles from 'vue-lifecycle-log'
+
+Vue.use(LogLifecycles, { components: ['component1', 'component2'] })
+```
 
 Passing an empty array will print all of them.
